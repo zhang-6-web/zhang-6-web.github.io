@@ -1,0 +1,4 @@
+baseURL = 'https://zhang-6-web.github.io'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = 'stack'
