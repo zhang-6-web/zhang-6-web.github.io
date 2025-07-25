@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Example Site</title>
+        <link>http://localhost:1313/posts/</link>
+        <description>Recent content in Posts on Example Site</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Thu, 24 Jul 2025 08:33:37 +0800</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Aeticles01</title>
+        <link>http://localhost:1313/posts/aeticles01/</link>
+        <pubDate>Thu, 24 Jul 2025 08:33:37 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/aeticles01/</guid>
+        <description>&lt;h1 id=&#34;测试&#34;&gt;测试
+&lt;/h1&gt;&lt;p&gt;正文内容展示。。。。&lt;/p&gt;
+&lt;h3 id=&#34;三级标题展示&#34;&gt;三级标题展示。。
+&lt;/h3&gt;&lt;p&gt;正文11&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
