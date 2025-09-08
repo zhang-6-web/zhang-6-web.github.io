@@ -9,7 +9,7 @@ name='description' content="数组转对象时的顺序问题 数组转对象的
 
 <link rel="canonical" href="http://localhost:1313/p/%E6%9C%80%E8%BF%91%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E6%9C%89%E5%85%B3%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%97%AE%E9%A2%98/" />
 
-<link rel="stylesheet" href="/scss/style.min.0e44364cf27e8ab8583565e7d0596fa1cf35607b260c4b1153522b43f149e6da.css"><meta property='og:title' content="最近遇到的一些有关对象的问题">
+<link rel="stylesheet" href="/scss/style.min.0ff95c93a79734c9ee2622d313ab9c87aef360fccd332d0ed34d4fa7c937cb38.css"><meta property='og:title' content="最近遇到的一些有关对象的问题">
 <meta property='og:description' content="数组转对象时的顺序问题 数组转对象的常见方式： 1 2 3 4 5 6 7 8 9 10 11 const arr = [ { id: 3, name: &#39;Tom&#39; }, { id: 1, name: &#39;Jerry&#39; }, { id: 2, name: &#39;Spike&#39; } ]; // 方式一：普通对象（数字或数字字符串作为 key） const obj = {}; arr.forEach(item =&gt; { obj[item.id] = item; }); 遭遇的问题： 当对象的 key 是数字或类似数字的字符串（如 &lt;font style=&quot;color:rgba(0, 0, 0, 0.9);background-color:rgba(0, 0, 0, 0.03);&quot;&gt;'1'&lt;/font&gt;, &lt;font style=&quot;color:rgba(0, 0, 0, 0.9);background-color:rgba(0, 0, 0, 0.03);&quot;&gt;'2'&lt;/font&gt;, &lt;font style=&quot;color:rgba(0, 0, 0, 0.9);background-color:rgba(0, 0, 0, 0.03);&quot;&gt;'3'&lt;/font&gt;）时，JavaScript 引擎会自动按照数字升序排列这些 key。 因此，转换后的对象属性顺序无法保证与原始数组顺序一致。 解决方案：使用map数据结构 1 2 3 4 5 6 7 8 const map = new Map(); arr.forEach(item =&gt; { map.set(item.id, item); }); // 遍历 Map，顺序与数组一致 map.forEach((value, key) =&gt; { console.log(key, value); }); Map 是 ES6 引入的数据结构，专门用于保存键值对。 Map 会严格记住键的插入顺序，遍历时会按照插入顺序返回键值对。 ">
 <meta property='og:url' content='http://localhost:1313/p/%E6%9C%80%E8%BF%91%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E6%9C%89%E5%85%B3%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%97%AE%E9%A2%98/'>
 <meta property='og:site_name' content='Amour verrouillé'>
@@ -403,6 +403,19 @@ name='description' content="数组转对象时的顺序问题 数组转对象的
 
         <div class="article-details">
             <h2 class="article-title">leaflet不同坐标系下，瓦片边界计算方法</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/%E5%A4%A7%E5%B1%8F%E8%87%AA%E9%80%82%E5%BA%94%E5%87%BD%E6%95%B0/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">大屏自适应函数</h2>
         </div>
     </a>
 </article>
