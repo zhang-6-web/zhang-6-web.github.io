@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Posts on Example Site</title>
+        <title>Posts on Amour verrouillé</title>
         <link>http://localhost:1313/posts/</link>
-        <description>Recent content in Posts on Example Site</description>
+        <description>Recent content in Posts on Amour verrouillé</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Thu, 24 Jul 2025 08:33:37 +0800</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 08 Sep 2025 10:00:08 +0800</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>My Second Post</title>
+        <link>http://localhost:1313/posts/my-second-post/</link>
+        <pubDate>Mon, 08 Sep 2025 10:00:08 +0800</pubDate>
+        
+        <guid>http://localhost:1313/posts/my-second-post/</guid>
+        <description>&lt;h1 id=&#34;跨系统修改网页标题以及网页logo&#34;&gt;跨系统修改网页标题以及网页logo
+&lt;/h1&gt;</description>
+        </item>
+        <item>
         <title>Aeticles01</title>
         <link>http://localhost:1313/posts/aeticles01/</link>
         <pubDate>Thu, 24 Jul 2025 08:33:37 +0800</pubDate>

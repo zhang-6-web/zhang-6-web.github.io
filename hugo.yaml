@@ -1,7 +1,7 @@
 baseurl: https://zhang-6-web.github.io/
 languageCode: en-us
 theme: hugo-theme-stack
-title: Example Site
+title: Amour verrouillé
 copyright: Example Person
 
 # Theme i18n support
@@ -15,11 +15,11 @@ hasCJKLanguage: false
 languages:
     en:
         languageName: English
-        title: Example Site
+        title: Amour verrouillé 
         weight: 1
         params:
             sidebar:
-                subtitle: Example description
+                subtitle: 
     zh-cn:
         languageName: 中文
         title: 演示站点
@@ -52,16 +52,16 @@ permalinks:
     page: /:slug/
 
 params:
+    # custom_css: ["css/custom.css"]
     mainSections:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon: # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
-
+    favicon: "favicon/favicon.ico"
+    # favicon: # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
     footer:
         since: 2020
         customText:
-
     dateFormat:
         published: Jan 02, 2006
         lastUpdated: Jan 02, 2006 15:04 MST
@@ -213,6 +213,7 @@ params:
 ### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
     main: []
+    # menus : ["Home", "About", "Contact"]
 
     social:
         - identifier: github

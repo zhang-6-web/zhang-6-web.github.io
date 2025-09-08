@@ -1,10 +1,10 @@
 {{- $context := .Context -}}
 {{- $limit := default 10 .Params.limit -}}
 <section class="widget tagCloud">
-    <div class="widget-icon">
+    <div class="widget-icon widget-title section-title">
         {{ partial "helper/icon" "tag" }}
+        <div >{{ T "widget.tagCloud.title" }}</div>
     </div>
-    <h2 class="widget-title section-title">{{ T "widget.tagCloud.title" }}</h2>
 
     <div class="tagCloud-tags">
         {{ range first $limit $context.Site.Taxonomies.tags.ByCount }}

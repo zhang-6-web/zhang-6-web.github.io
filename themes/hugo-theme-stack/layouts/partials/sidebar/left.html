@@ -14,7 +14,6 @@
                     <img src="{{ .src }}" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
                 {{ else }}
                     {{ $avatar := resources.Get (.src) }}
-                    
                     {{ if $avatar }}
                         {{ $avatarResized := $avatar.Resize "300x" }}
                         <img src="{{ $avatarResized.RelPermalink }}" width="{{ $avatarResized.Width }}"
@@ -37,7 +36,7 @@
         </div>
     </header>
 
-    {{- with .Site.Menus.social -}}
+    <!-- {{- with .Site.Menus.social -}}
         <ol class="menu-social">
             {{ range . }}
                 <li>
@@ -55,7 +54,7 @@
                 </li>
             {{ end }}
         </ol>
-    {{- end -}}
+    {{- end -}} -->
 
     <ol class="menu" id="main-menu">
         {{ $currentPage := . }}
@@ -74,7 +73,7 @@
             </a>
         </li>
         {{ end }}
-        <li class="menu-bottom-section">
+        <!-- <li class="menu-bottom-section">
             <ol class="menu">
                 {{- $currentLanguageCode := .Language.Lang -}}
                 {{ if ( compare.Gt .Site.Home.AllTranslations.Len 1 ) }}
@@ -89,7 +88,6 @@
                         </li>
                     {{ end }}
                 {{ end }}
-
                 {{ if (default false .Site.Params.colorScheme.toggle) }}
                     <li id="dark-mode-toggle">
                         {{ partial "helper/icon" "toggle-left" }}
@@ -98,6 +96,6 @@
                     </li>
                 {{ end }}
             </ol>
-        </li>
+        </li> -->
     </ol>
 </aside>

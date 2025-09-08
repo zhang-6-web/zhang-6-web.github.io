@@ -1,28 +1,63 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}" dir="{{ default `ltr` .Language.LanguageDirection }}">
-    <head>
-        {{- partial "head/head.html" . -}}
-        {{- block "head" . -}}{{ end }}
-    </head>
-    <body class="{{ block `body-class` . }}{{ end }}">
-        {{- partial "head/colorScheme" . -}}
+<html
+  lang="{{ .Site.LanguageCode }}"
+  dir="{{ default `ltr` .Language.LanguageDirection }}"
+>
+  <head>
+    {{- partial "head/head.html" . -}} {{- block "head" . -}}
+    <style>
+      /* 雪花效果的样式 */
+      .snow-container {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -10000;
+        /* pointer-events: none; */
+      }
 
-        {{/* The container is wider when there's any activated widget */}}
-        {{- $hasWidget := false -}}
-        {{- range .Site.Params.widgets -}}
-            {{- if gt (len .) 0 -}}
-                {{- $hasWidget = true -}}
-            {{- end -}}
-        {{- end -}}
-        <div class="container main-container flex on-phone--column {{ if $hasWidget }}extended{{ else }}compact{{ end }}">
-            {{- block "left-sidebar" . -}}
-                {{ partial "sidebar/left.html" . }}
-            {{- end -}}
-            {{- block "right-sidebar" . -}}{{ end }}
-            <main class="main full-width">
-                {{- block "main" . }}{{- end }}
-            </main>
-        </div>
-        {{ partial "footer/include.html" . }}
-    </body>
+      .snow {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        /* z-index: inherit; */
+        background: white;
+        border-radius: 50%;
+        animation: fall 10s linear infinite;
+      }
+
+      @keyframes fall {
+        0% {
+          transform: translateY(-100vh) translateX(-50%);
+        }
+        100% {
+          transform: translateY(200vh) translateX(-50%);
+        }
+      }
+    </style>
+    <!-- 默认头部内容 -->
+    {{- end }}
+  </head>
+  <body class="{{ block `body-class` . }}default-body-class{{ end }}">
+    {{- partial "head/colorScheme" . -}} {{/* The container is wider when
+    there's any activated widget */}} {{- $hasWidget := false -}} {{- range
+    .Site.Params.widgets -}} {{- if gt (len .) 0 -}} {{- $hasWidget = true -}}
+    {{- end -}} {{- end -}}
+    <div
+      class="container main-container flex on-phone--column {{ if $hasWidget }}extended{{ else }}compact{{ end }}"
+    >
+      {{- block "left-sidebar" . -}} {{ partial "sidebar/left.html" . }} {{- end
+      -}} {{- block "right-sidebar" . -}}{{ end -}}
+      <main class="main full-width">
+        {{- block "main" . -}}
+        <!-- 默认主要内容 -->
+        {{- end }}
+      </main>
+    </div>
+    {{ partial "footer/include.html" . }}
+    <!-- 引入雪花效果 -->
+    {{ if .Site.Params.snowEffectEnabled }} {{ partial "snow.html" . }} {{ end
+    }}
+  </body>
 </html>

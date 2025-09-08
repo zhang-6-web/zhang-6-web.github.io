@@ -4,12 +4,13 @@ module:
         min: "0.87.0"
 
 params:
+    custom_css: ["scss/custom.css"]
+    snowEffectEnabled: true
     mainSections:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon:
-
+    favicon: "/favicon/favicon.ico"
     footer:
         since:
         customText:
@@ -21,11 +22,12 @@ params:
     sidebar:
         compact: false
         emoji:
-        subtitle:
+        subtitle: "A hugo theme"
+        title: "Theme Stack"
         avatar:
             enabled: true
             local: true
-            src: img/avatar.png
+            # src: img/avatar.png
 
     article:
         headingAnchor: false
