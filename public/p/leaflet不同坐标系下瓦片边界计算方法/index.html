@@ -3,15 +3,15 @@
   lang="en"
   dir="ltr"
 >
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=54040&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" /><meta
 name='description' content="在 Web 地图开发中，瓦片（Tile）是地图数据的基本单位。不同坐标系（如 EPSG:3857 和 EPSG:4326）的瓦片边界计算方式不同，直接影响地图渲染和数据查询的准确性。本文档详细说明两种坐标系下的瓦片边界计算方法，并提供代码实现。\n坐标系简介：\n坐标系 名称 单位 适用范围 特点 EPSG:3857 Web 墨卡托 米（meters） Google Maps、OpenStreetMap 适用于 Web 地图，高纬度地区变形严重 EPSG:4326 WGS84 经纬度 度（degrees） 传统 GIS 系统 直接使用经纬度，无投影变形 瓦片边界计算：\n"> <title>leaflet不同坐标系下，瓦片边界计算方法</title>
 
-<link rel="canonical" href="http://localhost:1313/p/leaflet%E4%B8%8D%E5%90%8C%E5%9D%90%E6%A0%87%E7%B3%BB%E4%B8%8B%E7%93%A6%E7%89%87%E8%BE%B9%E7%95%8C%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/" />
+<link rel="canonical" href="http://localhost:54040/p/leaflet%E4%B8%8D%E5%90%8C%E5%9D%90%E6%A0%87%E7%B3%BB%E4%B8%8B%E7%93%A6%E7%89%87%E8%BE%B9%E7%95%8C%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/" />
 
-<link rel="stylesheet" href="/scss/style.min.8cbb2a2566bb96f3a701221f2ae6c090b0f52c98876f84f4b408e252e5eed7db.css"><meta property='og:title' content="leaflet不同坐标系下，瓦片边界计算方法">
+<link rel="stylesheet" href="/scss/style.min.f2dbbc95f81405f39f609f7d06c9685813453b9760ea27c34e938f0d8ef0cd96.css"><meta property='og:title' content="leaflet不同坐标系下，瓦片边界计算方法">
 <meta property='og:description' content="在 Web 地图开发中，瓦片（Tile）是地图数据的基本单位。不同坐标系（如 EPSG:3857 和 EPSG:4326）的瓦片边界计算方式不同，直接影响地图渲染和数据查询的准确性。本文档详细说明两种坐标系下的瓦片边界计算方法，并提供代码实现。\n坐标系简介：\n坐标系 名称 单位 适用范围 特点 EPSG:3857 Web 墨卡托 米（meters） Google Maps、OpenStreetMap 适用于 Web 地图，高纬度地区变形严重 EPSG:4326 WGS84 经纬度 度（degrees） 传统 GIS 系统 直接使用经纬度，无投影变形 瓦片边界计算：\n">
-<meta property='og:url' content='http://localhost:1313/p/leaflet%E4%B8%8D%E5%90%8C%E5%9D%90%E6%A0%87%E7%B3%BB%E4%B8%8B%E7%93%A6%E7%89%87%E8%BE%B9%E7%95%8C%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/'>
+<meta property='og:url' content='http://localhost:54040/p/leaflet%E4%B8%8D%E5%90%8C%E5%9D%90%E6%A0%87%E7%B3%BB%E4%B8%8B%E7%93%A6%E7%89%87%E8%BE%B9%E7%95%8C%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95/'>
 <meta property='og:site_name' content='Amour verrouillé'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='react' /><meta property='article:tag' content='leaflet' /><meta property='article:tag' content='webGIS' /><meta property='article:published_time' content='2025-09-08T10:18:14&#43;08:00'/><meta property='article:modified_time' content='2025-09-08T10:18:14&#43;08:00'/>
 <meta name="twitter:title" content="leaflet不同坐标系下，瓦片边界计算方法">

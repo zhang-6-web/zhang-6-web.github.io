@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>可视化大屏 on Amour verrouillé</title>
-        <link>http://localhost:1313/categories/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%A4%A7%E5%B1%8F/</link>
+        <link>http://localhost:54040/categories/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%A4%A7%E5%B1%8F/</link>
         <description>Recent content in 可视化大屏 on Amour verrouillé</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Mon, 08 Sep 2025 16:39:21 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%A4%A7%E5%B1%8F/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 08 Sep 2025 16:39:21 +0800</lastBuildDate><atom:link href="http://localhost:54040/categories/%E5%8F%AF%E8%A7%86%E5%8C%96%E5%A4%A7%E5%B1%8F/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>大屏中一些常用的css属性</title>
-        <link>http://localhost:1313/p/%E5%A4%A7%E5%B1%8F%E4%B8%AD%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84css%E5%B1%9E%E6%80%A7/</link>
+        <link>http://localhost:54040/p/%E5%A4%A7%E5%B1%8F%E4%B8%AD%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84css%E5%B1%9E%E6%80%A7/</link>
         <pubDate>Mon, 08 Sep 2025 16:39:21 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E5%A4%A7%E5%B1%8F%E4%B8%AD%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84css%E5%B1%9E%E6%80%A7/</guid>
+        <guid>http://localhost:54040/p/%E5%A4%A7%E5%B1%8F%E4%B8%AD%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84css%E5%B1%9E%E6%80%A7/</guid>
         <description>&lt;ol&gt;
 &lt;li&gt;&lt;font style=&#34;color:rgba(0, 0, 0, 0.9);background-color:rgb(245, 245, 245);&#34;&gt;width: fit-content;&lt;/font&gt;&lt;font style=&#34;color:#D22D8D;&#34;&gt;设置元素的宽度刚好能够容纳其内容;&lt;/font&gt;&lt;/li&gt;
 &lt;li&gt;&lt;font style=&#34;color:rgba(0, 0, 0, 0.9);background-color:rgb(245, 245, 245);&#34;&gt;box-sizing: border-box;&lt;/font&gt;&lt;font style=&#34;color:#D22D8D;&#34;&gt;定义元素的盒模型（box model）的计算方式。它的作用是让元素的宽度和高度包括内容、内边距（padding）和边框（border），但不包括外边距（margin）。这与默认的盒模型（&lt;/font&gt;&lt;code&gt;&amp;lt;font style=&amp;quot;color:#D22D8D;background-color:rgba(0, 0, 0, 0.03);&amp;quot;&amp;gt;content-box&amp;lt;/font&amp;gt;&lt;/code&gt;&lt;font style=&#34;color:#D22D8D;&#34;&gt;）不同，在默认的盒模型中，宽度和高度只包括内容，不包括内边距和边框。&lt;/font&gt;&lt;/li&gt;
