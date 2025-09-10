@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>自适应 on Amour verrouillé</title>
-        <link>http://localhost:54040/categories/%E8%87%AA%E9%80%82%E5%BA%94/</link>
+        <link>http://localhost:1313/categories/%E8%87%AA%E9%80%82%E5%BA%94/</link>
         <description>Recent content in 自适应 on Amour verrouillé</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Mon, 08 Sep 2025 16:50:59 +0800</lastBuildDate><atom:link href="http://localhost:54040/categories/%E8%87%AA%E9%80%82%E5%BA%94/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 08 Sep 2025 16:50:59 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E8%87%AA%E9%80%82%E5%BA%94/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>大屏自适应函数</title>
-        <link>http://localhost:54040/p/%E5%A4%A7%E5%B1%8F%E8%87%AA%E9%80%82%E5%BA%94%E5%87%BD%E6%95%B0/</link>
+        <link>http://localhost:1313/p/%E5%A4%A7%E5%B1%8F%E8%87%AA%E9%80%82%E5%BA%94%E5%87%BD%E6%95%B0/</link>
         <pubDate>Mon, 08 Sep 2025 16:50:59 +0800</pubDate>
         
-        <guid>http://localhost:54040/p/%E5%A4%A7%E5%B1%8F%E8%87%AA%E9%80%82%E5%BA%94%E5%87%BD%E6%95%B0/</guid>
+        <guid>http://localhost:1313/p/%E5%A4%A7%E5%B1%8F%E8%87%AA%E9%80%82%E5%BA%94%E5%87%BD%E6%95%B0/</guid>
         <description>&lt;h2 id=&#34;handlescreenauto-函数文档&#34;&gt;&lt;code&gt;handleScreenAuto&lt;/code&gt; 函数文档
 &lt;/h2&gt;&lt;h3 id=&#34;目的&#34;&gt;目的
 &lt;/h3&gt;&lt;p&gt;自适应调整数据大屏的显示，使其在不同分辨率的屏幕上保持设计稿的宽高比。&lt;/p&gt;
