@@ -385,8 +385,7 @@ ncaught TypeError: Cannot add property ref, object is not extensible
 
      运行效果：
 
-     ![alt](pic/record.gif)
-     
+     <img src='/img/record.gif'></img>
 
 2. #### 默认配置config:弹簧属性
 
