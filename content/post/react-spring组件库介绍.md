@@ -3,6 +3,8 @@ date = '2025-09-09T16:34:41+08:00'
 draft = false
 title = 'React-Spring组件库介绍'
 
+categories=['动画','React']
+
 +++
 
 ### React-Spring动画库介绍
@@ -412,53 +414,31 @@ ncaught TypeError: Cannot add property ref, object is not extensible
 
    ```js
    interface useSpringsProps {
-    
    //动画的起始值
-    
    from?: object
-    
    //动画的终点值
-    
    to?: object | key => object | Array<object>
-    
    // 动画开始的延迟时间
-    
    delay?: number | key => number
-    
    // 弹簧的基本属性(影响动画的速度、轨迹等)
-    
    config?: SpringConfig | key => SpringConfig
-    
    // 是否重头开始重新执行动画，只有设置reset才能达到想要的过渡动画效果 ，v9版本默认为true
-    
    reset?: boolean default false
-    
    // 如果为真，from和to设置的值将会对换，该属性只能和reset一起使用才能达到预期效果
-    
    reverse?: boolean default false
    //是否循环,v9新增属性
-    
    loop?: boolean default false
-    
    // 如果为真，则停止动画(直接跳转到结束状态)
-    
    immediate?: boolean | key => boolean
-    
    // 如果为true，将跳过渲染组件，直接写入dom
-    
    native?: boolean default false
-    
    // 动画开始时执行
-    
    onStart?: (ds: DS) => void
-    
    // 所有动画都停止时执行
-    
    onRest?: (ds: DS) => void
-    
    }
    ```
-
+   
 4. #### 插值使用
 
    - 作用:在 `react-spring` 中，`to` 方法（插值）允许你根据一个动画值动态生成另一个值。这在创建复杂动画时非常有用，比如根据元素的高度动态改变其颜色。interpolate(v9interpolate替换为to)
@@ -507,4 +487,160 @@ ncaught TypeError: Cannot add property ref, object is not extensible
 5. #### animated组件
 
    - `animated` 组件本质上就是一个普通的 HTML 元素，但它被 `react-spring` 包装后，能够动态地应用动画值到它的样式上。你可以把它想象成一个普通的 HTML 元素，只是它能够“理解”动画值，并且能够根据这些值自动更新样式。
-   - 
+   
+   - 示例：
+   
+     ```js
+     import React from 'react';
+     import { useSpring, animated } from '@react-spring/web';
+     
+     const AnimatedDiv = () => {
+       // 定义动画
+       const spring = useSpring({
+         from: { width: 0, backgroundColor: 'red', height: '50px' }, // 初始状态
+         to: { width: 100, backgroundColor: 'blue', height: '50px' }, // 最终状态
+         config: { duration: 2000 }, // 动画持续时间
+       });
+     
+       return (
+         <animated.div
+           style={spring} // 直接将 spring 对象绑定到 style 属性上
+         >
+           Hello, World!
+         </animated.div>
+       );
+     };
+     
+     export default AnimatedDiv;
+     ```
+   
+6. #### useSprings使用
+
+   - 参数：第一个：需要创建的spring的个数，第二个：useSpringProps对象数组
+
+   - 示例：
+
+     ```js
+     const springs=useSprings(5,[
+         {
+             from:{height:'40px'},
+             to:{height:'100px',backgroundColor:'yellow'},
+             reverse:show,
+             config:{
+                 mass:1
+             }
+         },
+         {
+             from:{height:'40px'},
+             to:{height:'150px',backgroundColor:'blue'},
+             reverse:show,
+             config:{
+                 mass:3
+             }
+         }
+      ])
+     ```
+
+7. #### useTrail使用
+
+   - 参数：第一个：需要创建spring的个数，第二个：useSpringProps(多个元素执行同一个动画)。
+
+   - 示例：
+
+     ```js
+     const springs=useTrail(6,[
+         {
+             from:{height:'40px'},
+             to:{height:'100px',backgroundColor: `rgb(${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)})`},
+             reverse:show,
+             config:{
+                 mass:1
+             }
+         },
+         {
+            from:{height:'40px'},
+             to:{height:'150px',backgroundColor: `rgb(${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)})`},
+             reverse:show,
+             config:{
+                 mass:3
+             }  
+         }
+     ])
+     ```
+
+8. #### useChain使用
+
+   - 用来控制不同的 spring 的执行顺序的，它没有返回值，接收一个springRef的数组，然后将数组的动画从左到右依次执行。
+
+9. #### useTransition使用
+
+   - 用于实现组件 mounted/unmounted 等生命周期时的过渡效果动画，其他的 API 都不能对组件生命周期进行控制。
+
+   - 示例：
+
+     ```js
+     const springApi = useSpringRef()
+     const spring = useSpring({
+     ref: springApi,
+     from: {
+     width: '100%',
+     height: '100%',
+     },
+     to: {
+     width: '20%',
+     height: '20%',
+     backgroundColor: 'red'
+     },
+     reverse: show,
+     })
+     const transApi = useSpringRef();
+     const trans = useTransition(show ? data : [], {
+     ref: transApi,
+     //动画开始前的延迟时间，以毫秒为单位
+     trail: 400 / data.length,
+     from: {
+     opacity: 0,
+     scale: 0,
+     backgroundColor: `yellow`
+     },
+     enter: { opacity: 1, scale: 1 },
+     leave: { opacity: 0, scale: 0 }
+     });
+     useChain([springApi, transApi]）
+     {trans((style, item) => {
+     return (
+     <animated.div
+     className="sbox"
+     style={{ ...style, background: item.css }}
+     >
+     {item.name}
+     </animated.div>
+     )
+     })}
+     ```
+
+     1. **`const trans = useTransition(show ? data : [], {...}`**
+        - **导演要指挥谁？** 这取决于 `show` 这个开关。
+        - 如果 `show` 是 `true`（开关打开），导演就指挥 `data` 数组里的所有演员。
+        - 如果 `show` 是 `false`（开关关闭），导演就指挥一个空数组 `[]`（也就是没有演员，所有人都要退场）。
+     2. **`ref: transApi,`**
+        - 给这位导演起个外号或者给他一个对讲机，叫 `transApi`。这样你之后就可以用这个对讲机（`transApi`）来直接给导演下命令，比如“开始！”或“停下！”。
+     3. **`trail: 400 / data.length,`**
+        - **演员上/下场的间隔时间。** 为了让表演有节奏感，不是所有演员一窝蜂地冲上台。
+        - `400` 毫秒是**所有演员依次完成动作的总时间**。
+        - `400 / data.length` 的意思是：**把总时间平均分给每一个演员**。
+        - **例子：** 如果有 4 个演员，那么每个演员的间隔就是 `400 / 4 = 100` 毫秒。第一个演员动作开始后，等100毫秒第二个开始，再等100毫秒第三个开始...以此类推。这样就会形成一个连贯的、有顺序的动画效果。
+     4. **`from: { opacity: 0, scale: 0, backgroundColor: 'yellow' }`**
+        - **演员的“起始化妆和站位”**（也就是动画开始前的状态）。
+        - `opacity: 0`： 完全透明（看不见）。
+        - `scale: 0`： 尺寸缩小到0（无限小，看不见）。
+        - `backgroundColor: 'yellow'`： （虽然看不见）但背景色是黄色。这个通常在“进入”动画中会逐渐变回元素本身的颜色，所以这里可能看不到黄色，除非特意配置。
+     5. **`enter: { opacity: 1, scale: 1 }`**
+        - 当演员**上台时（元素出现时）** 要做的动作：
+        - 从完全透明（`0`）**变成**完全不透明（`1`）—— 慢慢显现出来。
+        - 从无限小（`0`）**变成**正常大小（`1`）—— 慢慢放大出来。
+        - （它会从 `from` 的状态，变化到 `enter` 的状态）
+     6. **`leave: { opacity: 0, scale: 0 }`**
+        - 当演员**退场时（元素消失时）** 要做的动作：
+        - 从当前状态**变成**完全透明（`0`）和无限小（`0`）—— 慢慢消失并缩小。
+        - （它会从当前的状态，变化到 `leave` 的状态）
