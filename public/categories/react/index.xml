@@ -13,7 +13,7 @@
         <pubDate>Tue, 09 Sep 2025 16:34:41 +0800</pubDate>
         
         <guid>http://localhost:1313/p/react-spring%E7%BB%84%E4%BB%B6%E5%BA%93%E4%BB%8B%E7%BB%8D/</guid>
-        <description>&lt;h3 id=&#34;react-spring动画库介绍&#34;&gt;React-Spring动画库介绍
+        <description>&lt;img src="http://localhost:1313/img/tanhuang.jpg" alt="Featured image of post React-Spring组件库介绍" /&gt;&lt;h3 id=&#34;react-spring动画库介绍&#34;&gt;React-Spring动画库介绍
 &lt;/h3&gt;&lt;p&gt;react官网中提到的动画库有3个：React Transition Group\React MOtion以及React-Spring.其中React-Spring动画库社区最活跃，代码更新频次最高，文档也较完善；&lt;/p&gt;
 &lt;p&gt;优势：react-spring是一个基于弹簧物理学的动画库，灵感来自animated和react-motion，它继承了animated库的插值和性能以及react-motion的易用性，react-spring库提供了两种api:hooks api(只能写在函数组件中，写在类组件中会报错);Render-props api。&lt;/p&gt;
 &lt;p&gt;性能：最核心的一点就是每次动画属性改变不会引起组件重新render,而是直接修改了dom上的相关属性。所以这个动画效果就更接近真实世界。&lt;/p&gt;
