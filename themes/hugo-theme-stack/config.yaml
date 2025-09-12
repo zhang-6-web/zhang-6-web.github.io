@@ -39,35 +39,85 @@ params:
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
-     enabled: true
-     provider: waline
+        enabled: false
+        provider: disqus
 
-     waline:
-        # 这里填你的vercel服务器地址。
-        # vercel自定义域名会和cloudflare会冲突导致无限301,所以干脆直接用送的域名了
-        # 注意要部署总域名，而不是最新部署的版本域名（中间有一段随机英文字符的），否则会报 401 Unauthorized
-        serverURL: https://personal-vlog-two.vercel.app/
-        lang: zh-CN
-        # 文章浏览量统计，在新版waline中已更名为pageview属性，貌似用不了了
-        # 填入false代表不启用，填入字符串的时候会作为css选择器
-        visitor: false
-        # 头像来源，在V2中已移除该属性
-        avatar:
-        emoji:
-            - https://npm.elemecdn.com/@waline/emojis@1.1.0/bilibili
-            - https://npm.elemecdn.com/@waline/emojis@1.1.0/bmoji
-            - https://npm.elemecdn.com/@waline/emojis@1.1.0/weibo
-        # 回复时必填的内容
-        requiredMeta:
-            - name
-            - email
-            - url
-        # 评论框的默认的文字
-        placeholder: 欢迎留下宝贵的评论！
-        # 自定义语言设置，参考https://waline.js.org/cookbook/customize/locale.html#locale-%E9%80%89%E9%A1%B9
-        locale:
-            admin: 站长
-            sofa: 还没有人评论哦！快来抢沙发吧~
+        disqusjs:
+            shortname:
+            apiUrl:
+            apiKey:
+            admin:
+            adminLabel:
+
+        utterances:
+            repo:
+            issueTerm: pathname
+            label:
+
+        beaudar:
+            repo:
+            issueTerm: pathname
+            label:
+            theme:        
+
+        remark42:
+            host:
+            site:
+            locale:
+
+        vssue:
+            platform:
+            owner:
+            repo:
+            clientId:
+            clientSecret:
+            autoCreateIssue: false
+
+        # Waline client configuration see: https://waline.js.org/en/reference/client/props.html
+        waline:
+            serverURL:
+            lang:
+            visitor:
+            avatar:
+            emoji:
+                - https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo
+            requiredMeta:
+                - nick
+                - mail
+            locale:
+                admin: Admin
+                placeholder:
+
+        twikoo:
+            envId:
+            region:
+            path:
+            lang:
+
+        giscus:
+            repo:
+            repoID:
+            category:
+            categoryID:
+            mapping:
+            strict:
+            lightTheme:
+            darkTheme:
+            reactionsEnabled: 1
+            emitMetadata: 0
+            inputPosition:
+            lang:
+
+        gitalk:
+            owner:
+            admin:
+            repo:
+            clientID:
+            clientSecret:
+
+        cusdis:
+            host:
+            id:
 
     widgets:
         homepage: []
