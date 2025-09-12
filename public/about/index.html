@@ -9,7 +9,7 @@ name='description' content="Hugo, the world's fastest framework for building web
 
 <link rel="canonical" href="http://localhost:1313/about/" />
 
-<link rel="stylesheet" href="/scss/style.min.2ae09b3298ce3a57f1581bc2296478e6d2228d47c1f13ab84f914979a463a483.css"><meta property='og:title' content="About">
+<link rel="stylesheet" href="/scss/style.min.75a1a3bbff0e29c8fe5ced73f4fa37fcd36a653c40363adbb09905985187d0b6.css"><meta property='og:title' content="About">
 <meta property='og:description' content="Hugo, the world's fastest framework for building websites">
 <meta property='og:url' content='http://localhost:1313/about/'>
 <meta property='og:site_name' content='Amour verrouillé'>
@@ -86,7 +86,7 @@ name='description' content="Hugo, the world's fastest framework for building web
         
             
             <figure class="site-avatar">
-                <a href="/">
+                <a href="https://zhang-6-web-github-io.vercel.app/">
                 
                     
                     
@@ -355,50 +355,25 @@ name='description' content="Hugo, the world's fastest framework for building web
 </article> 
 
   
-    <div class="disqus-container">
-    <div id="disqus_thread"></div>
-<script>
-    window.disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
+    <script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
+<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet'/>
+<div id="waline" class="waline-container"></div>
 <style>
-    .disqus-container {
+    .waline-container {
         background-color: var(--card-background);
         border-radius: var(--card-border-radius);
         box-shadow: var(--shadow-l1);
         padding: var(--card-padding);
+        --waline-font-size: var(--article-font-size);
     }
-</style>
-
-<script>
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (typeof DISQUS == 'object') {
-            DISQUS.reset({
-                reload: true
-            });
-        }
-    })
+    .waline-container .wl-count {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    Waline.init({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://npm.elemecdn.com/@waline/emojis@1.1.0/bilibili","https://npm.elemecdn.com/@waline/emojis@1.1.0/bmoji","https://npm.elemecdn.com/@waline/emojis@1.1.0/weibo"],"lang":"zh-CN","locale":{"admin":"站长","sofa":"还没有人评论哦！快来抢沙发吧~"},"placeholder":"欢迎留下宝贵的评论！","requiredMeta":["name","email","url"],"serverURL":"https://personal-vlog-two.vercel.app/","visitor":false});
 </script>
  
-
-
 <footer class="site-footer">
     <section class="copyright">
         &copy; 
