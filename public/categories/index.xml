@@ -7,7 +7,23 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Tue, 09 Sep 2025 16:34:41 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 17 Sep 2025 16:55:19 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Leaflet</title>
+        <link>http://localhost:1313/categories/leaflet/</link>
+        <pubDate>Wed, 17 Sep 2025 16:55:19 +0800</pubDate>
+        
+        <guid>http://localhost:1313/categories/leaflet/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Map</title>
+        <link>http://localhost:1313/categories/map/</link>
+        <pubDate>Wed, 17 Sep 2025 16:55:19 +0800</pubDate>
+        
+        <guid>http://localhost:1313/categories/map/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>React</title>
         <link>http://localhost:1313/categories/react/</link>
         <pubDate>Tue, 09 Sep 2025 16:34:41 +0800</pubDate>
@@ -64,14 +80,6 @@
         <description></description>
         </item>
         <item>
-        <title>Leaflet</title>
-        <link>http://localhost:1313/categories/leaflet/</link>
-        <pubDate>Mon, 08 Sep 2025 13:35:07 +0800</pubDate>
-        
-        <guid>http://localhost:1313/categories/leaflet/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>GIS</title>
         <link>http://localhost:1313/categories/gis/</link>
         <pubDate>Mon, 08 Sep 2025 10:18:14 +0800</pubDate>
@@ -85,14 +93,6 @@
         <pubDate>Mon, 08 Sep 2025 10:18:14 +0800</pubDate>
         
         <guid>http://localhost:1313/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Map</title>
-        <link>http://localhost:1313/categories/map/</link>
-        <pubDate>Mon, 08 Sep 2025 10:12:49 +0800</pubDate>
-        
-        <guid>http://localhost:1313/categories/map/</guid>
         <description></description>
         </item>
         <item>

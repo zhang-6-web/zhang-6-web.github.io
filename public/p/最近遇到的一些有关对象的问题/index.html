@@ -9,7 +9,7 @@ name='description' content="数组转对象时的顺序问题 数组转对象的
 
 <link rel="canonical" href="http://localhost:1313/p/%E6%9C%80%E8%BF%91%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E6%9C%89%E5%85%B3%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%97%AE%E9%A2%98/" />
 
-<link rel="stylesheet" href="/scss/style.min.5f618dbce7f996c0a2424dc4c0ad31e0d6bb8f06cf1dedd08b0a14526be33cc4.css"><meta property='og:title' content="最近遇到的一些有关对象的问题">
+<link rel="stylesheet" href="/scss/style.min.96a7895a660c20b456d90ff6c994e01336c41f57b4332e28ac1ce9802a40e4f3.css"><meta property='og:title' content="最近遇到的一些有关对象的问题">
 <meta property='og:description' content="数组转对象时的顺序问题 数组转对象的常见方式： 1 2 3 4 5 6 7 8 9 10 11 const arr = [ { id: 3, name: &#39;Tom&#39; }, { id: 1, name: &#39;Jerry&#39; }, { id: 2, name: &#39;Spike&#39; } ]; // 方式一：普通对象（数字或数字字符串作为 key） const obj = {}; arr.forEach(item =&gt; { obj[item.id] = item; }); 遭遇的问题： 当对象的 key 是数字或类似数字的字符串（如 &lt;font style=&quot;color:rgba(0, 0, 0, 0.9);background-color:rgba(0, 0, 0, 0.03);&quot;&gt;'1'&lt;/font&gt;, &lt;font style=&quot;color:rgba(0, 0, 0, 0.9);background-color:rgba(0, 0, 0, 0.03);&quot;&gt;'2'&lt;/font&gt;, &lt;font style=&quot;color:rgba(0, 0, 0, 0.9);background-color:rgba(0, 0, 0, 0.03);&quot;&gt;'3'&lt;/font&gt;）时，JavaScript 引擎会自动按照数字升序排列这些 key。 因此，转换后的对象属性顺序无法保证与原始数组顺序一致。 解决方案：使用map数据结构 1 2 3 4 5 6 7 8 const map = new Map(); arr.forEach(item =&gt; { map.set(item.id, item); }); // 遍历 Map，顺序与数组一致 map.forEach((value, key) =&gt; { console.log(key, value); }); Map 是 ES6 引入的数据结构，专门用于保存键值对。 Map 会严格记住键的插入顺序，遍历时会按照插入顺序返回键值对。 ">
 <meta property='og:url' content='http://localhost:1313/p/%E6%9C%80%E8%BF%91%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E6%9C%89%E5%85%B3%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%97%AE%E9%A2%98/'>
 <meta property='og:site_name' content='Amour verrouillé'>
@@ -91,8 +91,8 @@ name='description' content="数组转对象时的顺序问题 数组转对象的
                     
                     
                         
-                        <img src="/img/avatar_hu_d351ed14b0215c72.png" width="300"
-                            height="284" class="site-logo" loading="lazy" alt="Avatar">
+                        <img src="/img/avatar_hu_f6aa513214b19f50.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
                 </a>
